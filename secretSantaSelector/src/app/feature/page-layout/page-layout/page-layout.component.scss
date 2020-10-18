@@ -1,0 +1,11 @@
+:host {
+  background-color: gray;
+  display: grid;
+  height: 100%;
+  width: 100%;
+}
+
+:host.top {
+  border-top: 2px solid green;
+  background-color: gold;
+}
