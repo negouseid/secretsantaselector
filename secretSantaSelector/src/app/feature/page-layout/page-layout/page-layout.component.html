@@ -1,2 +1,14 @@
-<p>page-layout works!</p>
-<app-submit-button class="success"> </app-submit-button>
+
+<header>
+  <ng-content select=".header"></ng-content>
+</header>
+<main>
+  <ng-content select=".main"></ng-content>
+</main>
+<div class="sidebar">
+  <ng-content select=".aside"></ng-content>
+</div>
+<footer>
+  <ng-content select=".footer"></ng-content>
+</footer>
+<!-- <app-submit-button class="success"> </app-submit-button> -->

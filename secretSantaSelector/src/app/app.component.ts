@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'secretSantaSelector';
+  public isOpen = true;
+
+
+  isOpenFunction(currentValue) {
+
+    this.isOpen = !currentValue;
+  }
 }

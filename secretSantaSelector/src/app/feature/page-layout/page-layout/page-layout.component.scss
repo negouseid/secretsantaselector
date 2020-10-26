@@ -1,11 +1,44 @@
 :host {
-  background-color: gray;
+  background-color: yellow;
   display: grid;
   height: 100%;
   width: 100%;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: 75px auto 75px;
 }
-
+:host.is-open{
+  grid-template-areas:
+    "header sidebar"
+    "main sidebar"
+    "footer footer";
+  .sidebar {
+    display: block;
+  }
+}
 :host.top {
   border-top: 2px solid green;
   background-color: gold;
+}
+
+header {
+  font-weight: bold;
+  font-size: 20px;
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
+
+.sidebar{
+  grid-area: sidebar;
+  background-color: #cccccc;
+  display: none;
 }

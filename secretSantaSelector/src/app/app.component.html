@@ -1,4 +1,10 @@
 
-<app-page-layout class="top"></app-page-layout>
-<router-outlet></router-outlet>
+<app-page-layout [class.is-open]="isOpen">
+  <div class="header">Hello world <button (click)="isOpen= !isOpen">toggle</button>  <button (click)="isOpenFunction(isOpen)">button 2</button></div>
+  <div class="main">hello body
+    <router-outlet></router-outlet>
+  </div>
+  <div class="aside">side bar</div>
+  <div class="footer">hello footer</div>
+</app-page-layout>
 
